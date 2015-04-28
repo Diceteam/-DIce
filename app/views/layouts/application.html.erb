@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dice</title>
+  <title>Dice[ダイス]|</title>
+  <meta name="description" content="Dice（ダイス）とは、あなたにぴったりで求めていたサービスが見つかる情報発信ミュレーションメディアです。今日からあなたのライフスタイルは充実する!" />
+    <meta name="keywords" content="Dice, ダイス, キュレーション, 投稿, メディア, 投稿型メディア, Daice, Dise, だいす, まとめ, キュレーション, 女子, Eコマース, EC, サービス, レコメンド, 会員サービス, ネットショップ, 最新, トレンド, トレンド情報" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <header id="header">
+    <div class="main_header">
+      <form accept-charset="UTF-8" action="/search" class="key_search" method="get">
+        <input class="key_search_submit" id="q" name="q" placeholder="キーワードを検索" type="text">
+        <input class="key_search_btn" type="submit" value="">
+      </form>
+        <h1 class="logo">
+        <%= image_tag 'dice_logo.png', :width=>'100' %>
+      </h1>
+      <ul class="head_nav">
+        <li>
+          <a href="/users/sign_in">まとめ作成</a>
+        </li>
+        <li>
+          <a href="/users/sign_in">ログイン</a>
+        </li>
+        <li>
+          <a href="/users/sign_up">無料会員登録</a>
+        </li>
+      </ul>
+   </div>
+  </header>
+
 
 <%= yield %>
 
