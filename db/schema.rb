@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429182540) do
+ActiveRecord::Schema.define(version: 20150429185640) do
 
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at"
@@ -30,10 +30,9 @@ ActiveRecord::Schema.define(version: 20150429182540) do
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "text",       limit: 255
-    t.string   "heading",    limit: 255
-    t.string   "link",       limit: 255
     t.integer  "entry_id",   limit: 4
+    t.string   "content",    limit: 255
+    t.integer  "status",     limit: 4
   end
 
   create_table "users", force: :cascade do |t|
