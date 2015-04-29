@@ -1,1 +1,9 @@
 <div class="catch_contents">
+
+  <% @articles.each do |article| %>
+    <a href="article/<%= article.id%>">  <!-- 記事をそれぞれ表示させる ここのレイアウトお願いします。 aタグで全部かこっているので写真もしくはタイトルをクリックしてもページに飛べるようにしています-->
+      <%= image_tag article.image, :class => "" %>  <!-- 写真表示 :class の後のダブルクォーテーションの中にクラス名を指定し、cssを当てられます。 -->
+      <%= article.title %>
+    </a> <!-- 記事のタイトル表示 -->
+  <%end%>
+</div>
