@@ -80,10 +80,17 @@ h1{
   text-decoration: none;
 }
 
+.head_nav li a:hover  {
+  text-decoration: underline;
+}
+
 .catch_contents  {
   background-color: #f5f5f5;
   border-bottom: 1px solid #eee;
   width: 1436px;
   height: 370px;
   margin-top: 25px;
+}
+.head_nav{
+  margin:0 auto;
 }

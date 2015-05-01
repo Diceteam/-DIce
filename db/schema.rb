@@ -14,22 +14,22 @@
 ActiveRecord::Schema.define(version: 20150429185640) do
 
   create_table "categories", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "category",   limit: 255
   end
 
   create_table "entries", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "title",       limit: 255
     t.integer  "category_id", limit: 4
     t.string   "image",       limit: 255
   end
 
   create_table "posts", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "entry_id",   limit: 4
     t.string   "content",    limit: 255
     t.integer  "status",     limit: 4
