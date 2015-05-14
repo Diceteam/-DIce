@@ -1,6 +1,7 @@
 class ArticleController < ApplicationController
   def index
     @articles = Entry.all
+    @users = User.all
   end
 
   def edit

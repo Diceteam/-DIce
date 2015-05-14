@@ -1,9 +1,811 @@
-<div class="catch_contents">
+<div class="catch_contents">  
+	<!--body上のレイアウト     -->
+	<div class="main_catch">  
+		<!-- 左と右のキャッチを合わせたもの    -->
+		<div class="main_catch_left">
+			<!--  main_catchの左の維持2つ   -->
+			<div class="main_catch_left_contents1">
+				<!--  左のコンテンツの1つ側  -->
+			<a href="article/id">
+			<%= image_tag 'human1.jpg', :width=>'300', :height=>'192' %></a>
+			<% @articles.each do |article| %> 
+			<p class="main_article_title">
+			<%= article.title %>
+			</p>
+			<p class="main_article_lead"></p>
+				<!-- リード文/overflowで文章の最初だけ表示させる  -->
+			<ul class="main_article_info_nav">
+				<!-- usernameとviewsを表示させるnav  -->
+				<% @users.each do |user| %>
+				<li class="main_article_user">
+				<a href="/user/<%= user.username%>">
+				<%= image_tag 'cghkvl_1.jpg', :height=>'20', :width=>'20' %>
+				</a>
+				<%end%>
+				</li>
+				<li class="main_article_view">
+					<span>10000view</span>
+				</li>
+			</ul>
+			<%end%>
+			</div>
 
-  <% @articles.each do |article| %>
-    <a href="article/<%= article.id%>">  <!-- 記事をそれぞれ表示させる ここのレイアウトお願いします。 aタグで全部かこっているので写真もしくはタイトルをクリックしてもページに飛べるようにしています-->
-      <%= image_tag article.image, :class => "" %>  <!-- 写真表示 :class の後のダブルクォーテーションの中にクラス名を指定し、cssを当てられます。 -->
-      <%= article.title %>
-    </a> <!-- 記事のタイトル表示 -->
-  <%end%>
+
+
+
+
+
+			<div class="main_catch_left_contents2">
+			<a href="article/id">
+			<%= image_tag "article_left.png", :width=>'300', :height=>'192' %>
+			</a>
+			<% @articles.each do |article| %> 
+			<p class="main_article_title">
+			<%= article.title %>
+			</p>
+			<p class="main_article_lead"></p>
+				<!-- リード文/overflowで文章の最初だけ表示させる  -->
+			<ul class="main_article_info_nav">
+				<!-- usernameとviewsを表示させるnav  -->
+				<% @users.each do |user| %>
+				<li class="main_article_user">
+				<a href="/user/<%= user.username%>">
+				<%= image_tag 'cghkvl_1.jpg', alt="", :height=>'20', :width=>'20' %>
+				</a>
+				</li>
+				<li class="main_article_view">
+					<span>10000view</span>
+				</li>
+				<%end%>
+			</ul>
+			<%end%>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="main_article_feature">
+			<!-- 特集ページ(右) -->
+			<div class="feature_title">
+			<h2>春の流行ファッション特集</h2>
+			<p>これで春をいち早く先取り！</p>
+				<div class="feature_under_line"></div>
+			</div>
+			<div class="main_article_wrapp">
+				<!-- 特集記事１つのレイアウト  -->
+				<div class="main_article_feature_list">
+					<!-- 特集記事１つのレイアウト  -->
+					<div class="feature_list_img" style="width:75px">
+					<a href="http://mery.jp/80627" data-list-id="80627">
+					<img alt="先っちょだけ塗って抜け感。不器用だけどセルフネイル派には「丸フレンチ」がおすすめ" class="crop_image" height="65" src="http://dqaeric34olch.cloudfront.net/lists/80627/o0480036013071592808.jpg/thumb?1424587331" width="65">
+					</a>
+					</div>
+					<div class="feature_list_text">
+					<p class="feature_list_title"><a href="http://mery.jp/80627">先っちょだけ塗って抜け感。不器用だけどセルフネイル派に...</a></p>
+					<ul class="feature_list_info">
+						<li>
+						<a href="http://mery.jp/user/ys_23">Swan</a>
+						</li>
+						<li>| <span>57438</span>view</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			
+
+
+
+
+			<div class="main_article_wrapp">
+				<div class="main_article_feature_list">
+		 			<div class="feature_list_img" style="width:75px">
+					<a href="http://mery.jp/86312" data-list-id="86312">
+					<img alt="服だけじゃない！肌も目も心も、これがほんとのオールホワイト主義" class="crop_image" height="65" src="http://dqaeric34olch.cloudfront.net/lists/86312/large.jpg/thumb?1426116777" width="65">
+					</a>
+					</div>
+					<div class="feature_list_text">
+					<p class="feature_list_title"><a href="http://mery.jp/86312">服だけじゃない！肌も目も心も、これがほんとのオールホワ...</a></p>
+					<ul class="feature_list_info">
+						<li>
+						<a href="http://mery.jp/user/taaajorim">ともみん。</a>
+						</li>
+						<li>｜<span>29600</span>view</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="main_article_wrapp">
+				<div class="main_article_feature_list">
+					<div class="feature_list_img" style="width:75px">
+					<a href="http://mery.jp/72557" data-list-id="72557">
+					<img alt="ふんわりくるん。触れたくなる前髪はカーラー2個で簡単につくれる♡" class="crop_image" height="65" src="http://dqaeric34olch.cloudfront.net/lists/72557/normal.jpeg/thumb?1421826408" width="65">
+					</a>
+					</div>
+					<div class="feature_list_text">
+					<p class="feature_list_title"><a href="http://mery.jp/72557">ふんわりくるん。触れたくなる前髪はカーラー2個で簡単に...</a></p>
+					<ul class="feature_list_info">
+						<li>
+						<a href="http://mery.jp/user/kurumiin1015">くるみ</a>
+						</li>
+						<li>｜<span>87090</span>view</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+			<p class="feature_link"><a href="http://mery.jp/topics/160"><span><< 特集をチェック</span></a></p>
+		</div>
+	</div>
+
+	<% @articles.each do |article| %>
+	<a href="article/<%= article.id%>">  <!-- 記事をそれぞれ表示させる ここのレイアウトお願いします。 aタグで全部かこっているので写真もしくはタイトルをクリックしてもページに飛べるようにしています-->
+	<%= image_tag article.image, :class => "" %>  <!-- 写真表示 :class の後のダブルクォーテーションの中にクラス名を指定し、cssを当てられます。 -->
+	<%= article.title %>
+	</a> <!-- 記事のタイトル表示 -->
+	<%end%>
 </div>
+
+
+
+
+
+
+
+
+
+
+<div id="wrpper" class"clear_fix">
+	<!-- 記事全体のbody -->
+	<div class="mix_contents">
+		<!-- navとcontentsを合わせたもの -->
+		<nav id="colum_menu">
+			<!-- メニューバー  -->
+		<ul id="scroll_bar" style="position: static; top: auto; bottom: auto;">
+			<li class="menu_all">
+			<a href="http://mery.jp">
+			<%= image_tag 'house.png', :width=>'17', :height=>'17' %><span>ホーム</span></a></li>
+			<li class="menu_music">
+			<a href="http://mery.jp/fashion">
+			<%= image_tag 'music.png', :width=>'26', :height=>'26' %>
+			<span>音楽</span></a></li>
+			<li class="menu_entertainment">
+			<a href="http://mery.jp/cosme">
+			<%= image_tag 'monitor.png', :width=>'17', :height=>'17' %>
+			<span>エンタメ</span></a></li>
+			<li class="menu_fashon"><a href="http://mery.jp/hairstyle">
+			<%= image_tag 'shoes.png', :width=>'17', :height=>'17' %>
+			<span>ファッション</span></a></li>
+			<li class="menu_beauty_hair"><a href="http://mery.jp/nail">
+			<%= image_tag 'Cut.png', :width=>'17', :height=>'17' %>
+			<span>美容・ヘア</span></a></li>
+			<li class="menu_love"><a href="http://mery.jp/beauty">
+			<%= image_tag 'love.png', :width=>'17', :height=>'17' %>
+			<span>恋愛</span></a></li>
+			<li class="menu_gourmet"><a href="http://mery.jp/gourmet">
+			<%= image_tag 'fork_and_knife_in_cross.jpg', :width=>'17', :height=>'17' %>
+			<span>グルメ</span></a></li>
+			<li class="menu_travel"><a href="http://mery.jp/travel">
+			<%= image_tag 'airplane.png', :width=>'17', :height=>'17' %>
+			<span>旅行・おでかけ</span></a></li>
+			<li class="menu_life"><a href="http://mery.jp/love">
+			<%= image_tag 'sofa.png', :width=>'17', :height=>'17' %>
+			<span>ライフスタイル</span></a></li>
+			<li class="nav_app"><a href="http://mery.jp/lifestyle">
+			<%= image_tag 'icon_sphone01.png', :width=>'17', :height=>'17' %>
+			<span>アプリ</span></a></li>
+		</ul>
+		</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div id="contents">
+			<!--  投稿記事記事全体レイアウト -->
+			<div class="contents_title">
+				<!--  投稿記事のヘッダー -->
+				<h2>今日のオススメ</h2>
+			</div>
+			<div class="contents_articles">
+				<!--  投稿記事記事全体 -->
+				<div class="article_pickup_list">
+					<!--  1記事のレイアウト -->
+					<div class="article_pickup_img" style="width:85px">
+						<!--  サムネイル写真 -->
+						<a href="http://mery.jp/104590" data-list-id="104590">
+							<img alt="恥ずかしがり屋な彼限定♡“さりげない”がポイントのペアルックのすゝめ" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/104590/large.jpg/thumb?1430695924" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<!-- 記事の写真以外のレイアウト -->
+						<p class="article_list_title"><a href="http://mery.jp/104590">恥ずかしがり屋な彼限定♡“さりげない”がポイントのペアルックのすゝめ</a></p>
+						<p class="article_list_lead">「ペアルックでデートしよう♡」に断られたことのある女の子集合！そんな恥かしが...</p>
+						<ul class="article_list_info">
+							<!-- ユーザー名とview数  -->
+							<li><a href="http://mery.jp/user/taaajorim">ともみん。</a></li>
+							<li>｜<span>14599</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105247" data-list-id="105247">
+							<img alt="コスパもよし！肌にもよし！赤ちゃん用おしりふきがメイク落としに使えるってウワサ♡" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105247/11193082_1589714144586720_404369357_n.jpg/thumb?1430811097" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105247">コスパもよし！肌にもよし！赤ちゃん用おしりふきがメイク落としに使えるってウワサ♡</a></p>
+						<p class="article_list_lead">血色メイクで最近話題のイガリシノブさんや、ママモデルとしても大活躍中の鈴木え...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/fuki">fuki</a></li>
+							<li>｜<span>24464</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/97152" data-list-id="97152">
+							<img alt="田中里奈・瀬戸あゆみも絶賛♡今モデルに人気の”新しい女子会”とは？" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/97152/DSC_0589_%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC.JPG/thumb?1428912603" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/97152">田中里奈・瀬戸あゆみも絶賛♡今モデルに人気の”新しい女子会”とは？</a></p>
+						<p class="article_list_lead">今話題の宿泊サービス”Airbnb”を使った女子会、「エアビー女子会」を田中里奈ち...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/mery">MERY公式</a></li>              
+							<li>｜<span>54073</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/103111" data-list-id="103111">
+							<img alt="春夏だって黒を着たい！素材で重く見せないブラックアイテム" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/103111/tumblr_myajigG8hy1s6kaq6o1_500.jpg/thumb?1430911546" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/103111">春・夏だって黒を着たい！素材で重く見せないブラックアイテム</a></p>
+						<p class="article_list_lead">とにかく重く見えがちなカラー・黒。春っぽくない、夏っぽくないと言われがち。そ...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/mokakko">moka♡</a></li>
+							<li>｜<span>10294</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/106271" data-list-id="106271">
+							<img alt="［5月8日新着］オールホワイトで上級者を狙え！テイスト別コーデ3選♡" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/106271/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2015-05-08_20.13.08.png/thumb?1431083623" width="75">            
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/106271">［5月8日新着］オールホワイトで上級者を狙え！テイスト別コーデ3選♡</a></p>
+						<p class="article_list_lead">本日発売の人気ブランドのアイテムから、MERYが厳選したものをお届け！今年のトレ...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/mery_press">MERYPRESS</a></li>
+							<li>｜<span>8613</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105798" data-list-id="105798">
+							<img alt="今日はどれにする？‘日替わりバスソルト’で毎日ちょっぴりの贅沢time" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105798/normal/thumb?1430983112" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105798">今日はどれにする？‘日替わりバスソルト’で毎日ちょっぴりの贅沢time</a></p>
+						<p class="article_list_lead">毎日お風呂タイムは贅沢にリラックスしたい。でも毎日一緒はつまらないから、ちょ...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/kie">Kie？</a></li>
+							<li>｜<span>5413</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105338" data-list-id="105338">
+							<img alt="なくてもいいけどあると便利なちょっとしたもの。旅行に持って行くといい5つのアイテム" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105338/large.jpg/thumb?1430820135" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105338">なくてもいいけどあると便利なちょっとしたもの。旅行に持って行くといい5つのアイテム</a></p>
+						<p class="article_list_lead">一泊二日でちょっと遠出。ガッツリ一週間海外旅行。どんなお出かけにしろ、家にい...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/maa4">acb</a></li>
+							<li>｜<span>32355</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/102884" data-list-id="102884">
+							<img alt="こじはるも登場♡ティファニー×雑誌sweetのパーティーが開催！" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/102884/0423t_0461_%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC.jpg/thumb?1430383587" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/102884">こじはるも登場♡ティファニー×雑誌sweetのパーティーが開催！</a></p>
+						<p class="article_list_lead">おしゃれガールズの定番ジュエリーブランドTiffany（ティファニー）の、横浜ランド...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/sweet_official">sweet公式</a></li>
+							<li>｜<span>11146</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105874" data-list-id="105874">
+							<img alt="海でも街でも大活躍！AMPHIのビーチブラで水着コーディネートを楽しむ" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105874/7281091B_26_D_500.jpg/thumb?1430989051" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105874">海でも街でも大活躍！AMPHIのビーチブラで水着コーディネートを楽しむ</a></p>
+						<p class="article_list_lead">AMPHI（アンフィ）から2015年の新作水着が登場しました！街ではノンワイヤーブラと...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/mna_tkhs">mana</a></li>
+							<li>｜<span>22949</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/100346" data-list-id="100346">
+							<img alt="【お悩み別】ぺたんこ靴でもすらっと足長◎ 印象を変える楽カワコーデLesson" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/100346/DMA-_MG_4802.jpg/thumb?1429602858" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/100346">【お悩み別】ぺたんこ靴でもすらっと足長◎ 印象を変える楽カワコーデLesson</a></p>
+						<p class="article_list_lead">流行りのフラットシューズは気になるけれど、スタイル良く履きこなせるか不安…。...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/non-no_official">non・no</a></li>
+							<li>｜<span>25876</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105801" data-list-id="105801">
+							<img alt="5年先もキレイな自信ある？hair＆bodyの紫外線ダメージケア法" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105801/tumblr_n90bmq8k631swbf6ro1_500.jpg/thumb?1430979796" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105801">5年先もキレイな自信ある？hair＆bodyの紫外線ダメージケア法</a></p>
+						<p class="article_list_lead">あなたは、5年先もキレイな自信がありますか？自信のない女子は必見！髪、カラダは...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/piyoko">ぴよさん</a></li>
+							<li>｜<span>11757</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/100212" data-list-id="100212">
+							<img alt="シュ〜っとする美容法♡平子理沙も愛用の&quot;炭酸ミスト&quot;で素肌力UP！" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/100212/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2015-04-21_12.13.12.png/thumb?1429586030" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/100212">シュ〜っとする美容法♡平子理沙も愛用の"炭酸ミスト"で素肌力UP！</a></p>
+						<p class="article_list_lead">ビューティーミューズ平子理沙や、すっぴんがキレイと話題のざわちんも愛用してい...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/mery">MERY公式</a></li>
+							<li>｜<span>9903</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105502" data-list-id="105502">
+							<img alt="ディズニーランドだけじゃない♡まるでアニメの世界のような無料穴場スポット" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105502/d3c3266d02d554fe37cfee8dcdeabe80788a7e94.jpg/thumb?1430895101" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105502">ディズニーランドだけじゃない♡まるでアニメの世界のような無料穴場スポット</a></p>
+						<p class="article_list_lead">ディズニーランドやユニバーサルスタジオジャパンなど、まるでアニメや映画の世界...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/fuki">fuki</a></li>
+							<li>｜<span>41606</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105747" data-list-id="105747">
+							<img alt="トレンドなのに着回し力◎カーキ色のショーパンで組むラフコーディネート" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105747/normal/thumb?1430974815" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105747">トレンドなのに着回し力◎カーキ色のショーパンで組むラフコーディネート</a></p>
+						<p class="article_list_lead">トレンドのカーキ色を取り入れたショートパンツは、オシャレなだけじゃなくて着回...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/ma02xx">mao＊</a></li>
+							<li>｜<span>11637</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105856" data-list-id="105856">
+							<img alt="紙袋がお財布に！？スタバのカップや紙袋が便利な◯◯になっちゃうって噂！" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105856/o0426039813104302775.jpg/thumb?1430989001" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105856">紙袋がお財布に！？スタバのカップや紙袋が便利な◯◯になっちゃうって噂！</a></p>
+						<p class="article_list_lead">みんな大好きスタバでいつも手に入る紙袋やカップ。飲み終わったら捨ててしまうけ...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/motimai">もちまい</a></li>
+							<li>｜<span>26100</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/102677" data-list-id="102677">
+							<img alt="海外セレブも！？大人可愛い&quot;センター分け&quot;ヘアスタイルでお洒落を格上げ♡" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/102677/Olivia5.jpg/thumb?1430807108" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/102677">海外セレブも！？大人可愛い"センター分け"ヘアスタイルでお洒落を格上げ♡</a></p>
+						<p class="article_list_lead">なんだかダサくなりそう。。。と手を出しにくいセンター分け。だけど海外セレブは...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/sahoxo">sahoxo</a></li>
+							<li>｜<span>12352</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/104687" data-list-id="104687">
+							<img alt="【SNS】自己満だけじゃダサくない？「つまむ」写真でアッと言わせましょ♡" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/104687/matome_20150413010328_552b15e088001.png/thumb?1430632698" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/104687">【SNS】自己満だけじゃダサくない？「つまむ」写真でアッと言わせましょ♡</a></p>
+						<p class="article_list_lead">ただの風景、ただの集合写真…。それって見てる方は楽しくないんじゃない？そんな...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/ask_067">アサハナ</a></li>
+							<li>｜<span>17316</span>view</li>
+						</ul>
+					</div>
+				</div>
+				<div class="article_pickup_list">
+					<div class="article_pickup_img" style="width:85px">
+						<a href="http://mery.jp/105656" data-list-id="105656">
+							<img alt="ミモレ丈にはもう飽きた！そんなあなたは「ミニ丈」ボトムで流行を先取りせよ" class="crop_image" height="75" src="http://dqaeric34olch.cloudfront.net/lists/105656/tumblr_n4a1296hBm1r3ssjeo1_500.png/thumb?1430975669" width="75">
+						</a>
+					</div>
+					<div class="article_list_text">
+						<p class="article_list_title"><a href="http://mery.jp/105656">ミモレ丈にはもう飽きた！そんなあなたは「ミニ丈」ボトムで流行を先取りせよ</a></p>
+						<p class="article_list_lead">ミモレ丈に飽きてきたら、ショーパンやミニスカにチェンジ！最近はずっと長めのボ...</p>
+						<ul class="article_list_info">
+							<li><a href="http://mery.jp/user/shiori6">shiori6</a></li>
+							<li>｜<span>17675</span>view</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+
+				<div id="paginate">
+
+					<strong>1</strong>
+
+					<a href="/?page=2" rel="next">2</a>
+
+					<a href="/?page=3">3</a>
+
+					<a href="/?page=4">4</a>
+
+					<span>...</span>
+
+					<a href="/?page=20">20</a>
+
+					<span>...</span>
+
+					<a href="/?page=40">40</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="sidebar_nav">
+		<!-- バー全体  -->
+		<div class="side_ad">
+			<div id="pc_mery_dfp_1" style="width:300px;height:250px">
+				<script type="text/javascript">googletag.cmd.push(function(){googletag.display("pc_mery_dfp_1")});</script>
+			</div>
+		</div>
+
+		<div class="feature_title">
+			<h2>アクセスランキング</h2>
+			<p>人気の記事</p>
+			<div class="feature_under_line">
+			</div>
+		</div>
+		<div class="side_article_list">
+			<!-- アクセスランキング全記事  -->
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/106140">
+						<img alt="下半身が痩せない。あなたのお悩みの原因は「大転子」でした" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/106140/tumblr_nmyox0uWXo1s99i81o1_500.png/thumb?1431064139" width="50">
+						<%= image_tag 'rank_icon_1.png', :width=>'26', :height=>'24' %>
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/106140">下半身が痩せない。あなたのお悩みの原因は「大転子」でした</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/yuuuuvi">yuuuuvi
+						</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/106424">
+						<img alt="＼今日は男ウケを狙いたい気分なの／たった2つのポイントでモテ確定♡" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/106424/tumblr_mpz27hd1Wh1svps5so1_400.jpg/thumb?1431139664" width="50">
+						<%= image_tag 'rank_icon_2.png', :width=>'24', :height=>'22' %>
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/106424">＼今日は男ウケを狙いたい気分なの／たった2つのポイントでモテ確定♡</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/motomi0911">MOTOMI</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/106211">
+						<img alt="痩せるポイントは“食べる前”にあり♡食前ダイエットで理想のBodyを作り出せっ" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/106211/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2015-05-08_18.14.00.png/thumb?1431076624" width="50">
+						<%= image_tag 'rank_icon_3.png', :width=>'23', :height=>'20' %>
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/106211">痩せるポイントは“食べる前”にあり♡食前ダイエットで理想のBodyを作り出せっ</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/tmkuso">tmkuso</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/106550">
+						<img alt="無料で アイス が食べ放題♡「シャトレーゼの工場見学」は行かなきゃ損！" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/106550/04211446_4dafc4c401176.jpg/thumb?1431160512" width="50">
+						<%= image_tag 'rank_icon_4.png', :width=>'18', :height=>'16' %>
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/106550">無料で アイス が食べ放題♡「シャトレーゼの工場見学」は行かなきゃ損！</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/fumo">ふーも</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/100518">
+						<img alt="もっとミスドに行きたくなる！意外に知らないミスタードーナツで使える裏ワザ♡" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/100518/shop.jpg/thumb?1430381553" width="50">
+						<%= image_tag 'rank_icon_5.png', :width=>'18', :height=>'16' %>
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/100518">もっとミスドに行きたくなる！意外に知らないミスタードーナツで使える裏ワザ♡</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/aya_kuma09">あやくま</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="feature_title">
+			<h2>注目のまとめ</h2>
+			<p>編集部のオススメ</p>
+			<div class="feature_under_line">
+			</div>
+		</div>
+		<div class="side_article_list">
+			<!-- オススメまとめ記事全記事  -->
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/99534" data-list-id="99534">
+						<img alt="四季を感じる幸せ♡おしゃれな大人の間で流行ってる”新しいキャンプ”とは？" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/99534/_MG_0464_s.jpg/thumb?1429597661" width="50">
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/99534">四季を感じる幸せ♡おしゃれな大人の間で流行ってる”新しいキャンプ”...</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/mery">Dice公式</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/98100" data-list-id="98100">
+						<img alt="&quot;MINT GIRL&quot;な吉高由里子が可愛すぎ♡春のおでかけの合言葉とは？" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/98100/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2015-04-16_12.04.18.png/thumb?1429153475" width="50">
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/98100">"MINT GIRL"な吉高由里子が可愛すぎ♡春のおでかけの合言葉とは？</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/mery">Dice公式</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/102669" data-list-id="102669">
+						<img alt="インスタから【#mery_pink_pink_pink】を発信して、MERYに掲載されよう♡" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/102669/11055900_1605233139688392_1800582929_n.jpg/thumb?1430125675" width="50">
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/102669">インスタから【#mery_pink_pink_pink】を発信して、MERYに掲載されよう...</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/meryaward">MERYAWARD</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/95358" data-list-id="95358">
+						<img alt="自まつ毛がぐんぐん伸びる♡本当にはえる&quot;まつ育&quot;美容法" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/95358/10144000649.jpg/thumb?1430221191" width="50">
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/95358">自まつ毛がぐんぐん伸びる♡本当にはえる"まつ育"美容法</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/mery">Dice公式</a>
+					</p>
+				</div>
+			</div>
+			<div class="side_list_content">
+				<div class="side_list_img" style="width:60px">
+					<a href="http://mery.jp/102884" data-list-id="102884">
+						<img alt="こじはるも登場♡ティファニー×雑誌sweetのパーティーが開催！" class="crop_image" height="50" src="http://dqaeric34olch.cloudfront.net/lists/102884/0423t_0461_%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC.jpg/thumb?1430383587" width="50">
+					</a>
+				</div>
+				<div class="side_list_text">
+					<p class="side_list_title"><a href="http://mery.jp/102884">こじはるも登場♡ティファニー×雑誌sweetのパーティーが開催！</a></p>
+					<p class="side_article_user">
+						<a href="http://mery.jp/user/sweet_official">Dice公式</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="feature_title">
+		<h2>人気キーワード</h2>
+		<p>今話題になっているキーワード</p>
+			<div class="feature_under_line">
+			</div>
+		</div>
+		<section class="side_keyword">
+			<div class="keywords_area">
+			<ul>
+				<li class="tag"><a href="http://mery.jp/tag/6678">シンプルネイル</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/456">水着</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/32288">ガウチョパンツ</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/12452">江ノ島</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/11574">シースルーバング</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/282">パーカー</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/4625">白シャツ</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/651">代官山</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/226">韓国コスメ</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/11485">ピクニック</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/31149">おフェロ</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/87">デニム</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/225">化粧下地</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/1951">jouetie</a></li>
+				<li class="tag"><a href="http://mery.jp/tag/540">自分磨き</a></li>
+			</ul>
+			</div>
+		</section>
+
+	<div class="img_feature">
+	<%= image_tag 'cafe_con.jpg', :width=>'287', :height=>'120' %>
+	</div>
+
+	<div class="img_feature">
+	<%= image_tag 'cafe_con.jpg', :width=>'287', :height=>'120' %>
+	</div>
+
+	<div class="img_feature">
+	<%= image_tag 'cafe_con.jpg', :width=>'287', :height=>'120' %>
+	</div>
+
+	<div class="img_feature">
+	<%= image_tag 'cafe_con.jpg', :width=>'287', :height=>'120' %>
+	</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
