@@ -16,26 +16,130 @@
         <input class="key_search_submit" id="q" name="q" placeholder="キーワードを検索" type="text">
         <input class="key_search_btn" type="submit" value="">
       </form>
-        <h1 class="logo">
+      <h1 class="logo">
         <a href="/">
-        <%= image_tag 'dice_logo.png', :width=>'100' %></a>
-      </h1>
-      <ul class="head_nav">
-        <li>
-          <a href="/users/sign_in">まとめ作成</a>
-        </li>
-        <li>
-          <a href="/users/sign_in">ログイン</a>
-        </li>
-        <li>
-          <a href="/users/sign_up">無料会員登録</a>
-        </li>
-      </ul>
-   </div>
-  </header>
-
+          <%= image_tag 'dice_logo.png', :width=>'100' %></a>
+        </h1>
+        <ul class="head_nav">
+          <li>
+            <a href="/users/sign_in">まとめ作成</a>
+          </li>
+          <li>
+            <a href="/users/sign_in">ログイン</a>
+          </li>
+          <li>
+            <a href="/users/sign_up">無料会員登録</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
 <%= yield %>
+
+<footer>
+
+  <div class="footer_bar">
+    <div class="footer_bar_in">
+    <h2>∇カテゴリ</h2>
+    <ul>
+      <li>
+        <dt>
+          <dd>音楽</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>エンタメ</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>ファッション</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>美容・ヘア</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>恋愛</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>グルメ</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>旅行・お出かけ</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>ライフスタイル</dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd>アプリ</dd>
+        </dt>
+      </li>
+    </ul>
+    </div>
+    <div class="footer_bar_in_2">
+    <h2>∇概要</h2>
+    <ul>
+      <li>
+        <dt>
+          <dd><a href="">アクセス・お問い合わせはこちら</a></dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd><a href="">利用規約</a></dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd><a href="">プライバシーポリシー</a></dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd><a href="">運営会社</a></dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd><a href="">プレスリリースの送付</a></dd>
+        </dt>
+      </li>
+      <li>
+        <dt>
+          <dd><a href="">Diceの仲間になる</a></dd>
+        </dt>
+      </li>
+    </ul>
+    <br><br>
+    </div>
+    <div class="logo_dice">
+    <a href="">
+    ∇What is <%= image_tag 'dice_logo.png', :width=>'85', :height=>'30' %></a>
+    </div>
+  </div>
+  <div class="message_bar">
+  <p class="message">弊サイトの掲載の情報・画像など、すべてのコンテンツの無断複写・転載を禁じます。</p>
+    <div class="copy_right">
+    <p>Copyright© Dice</p>
+    </div>
+  </div>
+
+</footer>
+
+
 
 </body>
 </html>
